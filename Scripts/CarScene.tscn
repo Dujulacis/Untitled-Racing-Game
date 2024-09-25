@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmnhcoygty0na"]
+
+[ext_resource type="Script" path="res://Scripts/MovementScript.gd" id="1_bd5nd"]
+[ext_resource type="Texture2D" uid="uid://bhrpabaq2wc8d" path="res://Assets/Cars/testcar.png" id="2_2xfal"]
+[ext_resource type="Script" path="res://Scripts/CameraSettings.gd" id="3_0y1d3"]
+[ext_resource type="PackedScene" uid="uid://ddeie3eyvk3bh" path="res://Scripts/HudScene.tscn" id="4_yowh4"]
+
+[node name="Main" type="CharacterBody2D"]
+script = ExtResource("1_bd5nd")
+
+[node name="Car" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("2_2xfal")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)
+rotation_smoothing_enabled = true
+script = ExtResource("3_0y1d3")
+
+[node name="HudScene" parent="." instance=ExtResource("4_yowh4")]

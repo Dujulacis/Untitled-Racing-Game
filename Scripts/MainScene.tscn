@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqjkc5jcgjj2b"]
+
+[ext_resource type="Texture2D" uid="uid://bg5mrsis1wbjn" path="res://Assets/Tracks/carpet.jpg" id="1_hckrf"]
+[ext_resource type="PackedScene" uid="uid://dmnhcoygty0na" path="res://Scripts/CarScene.tscn" id="2_0ncq1"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("2_0ncq1")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(7152, 4744)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+scale = Vector2(8, 8)
+texture = ExtResource("1_hckrf")
+centered = false

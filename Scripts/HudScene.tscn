@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddeie3eyvk3bh"]
+
+[ext_resource type="Script" path="res://Scripts/HudScript.gd" id="1_ilmik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7l6jl"]
+font_size = 120
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HudScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ilmik")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 960.0
+offset_top = 620.0
+offset_right = 1612.0
+offset_bottom = 839.0
+scale = Vector2(0.621266, 0.621266)
+text = "xxx kmh"
+label_settings = SubResource("LabelSettings_7l6jl")
